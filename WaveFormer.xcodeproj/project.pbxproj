@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040958E61DD4291900B74DF3 /* drumLoop.aif in Resources */ = {isa = PBXBuildFile; fileRef = 040958E51DD4289600B74DF3 /* drumLoop.aif */; };
+		042792321DD046F400197EEC /* drumLoop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 042792311DD046F400197EEC /* drumLoop.wav */; };
 		04510ADC1DCFF94400CA7347 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04510ADB1DCFF94400CA7347 /* AppDelegate.swift */; };
 		04510ADE1DCFF94400CA7347 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04510ADD1DCFF94400CA7347 /* Assets.xcassets */; };
 		04510AE11DCFF94400CA7347 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04510ADF1DCFF94400CA7347 /* MainMenu.xib */; };
+		04510AED1DD011FD00CA7347 /* WaveFormer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04510AEC1DD011FD00CA7347 /* WaveFormer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040958E51DD4289600B74DF3 /* drumLoop.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = drumLoop.aif; sourceTree = "<group>"; };
+		042792311DD046F400197EEC /* drumLoop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drumLoop.wav; sourceTree = "<group>"; };
+		044B3F181DD3E53700C6F80F /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		04510AD81DCFF94400CA7347 /* WaveFormer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaveFormer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04510ADB1DCFF94400CA7347 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04510ADD1DCFF94400CA7347 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04510AE01DCFF94400CA7347 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		04510AE21DCFF94400CA7347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04510AEB1DD011FD00CA7347 /* WaveFormer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveFormer.h; sourceTree = "<group>"; };
+		04510AEC1DD011FD00CA7347 /* WaveFormer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveFormer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040958E71DD4558400B74DF3 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				042792311DD046F400197EEC /* drumLoop.wav */,
+				040958E51DD4289600B74DF3 /* drumLoop.aif */,
+			);
+			name = Samples;
+			sourceTree = "<group>";
+		};
+		040958E81DD4559100B74DF3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				04510AEB1DD011FD00CA7347 /* WaveFormer.h */,
+				04510AEC1DD011FD00CA7347 /* WaveFormer.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		040958E91DD4559C00B74DF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04510ADD1DCFF94400CA7347 /* Assets.xcassets */,
+				04510AE21DCFF94400CA7347 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		040958EA1DD455A600B74DF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04510ADF1DCFF94400CA7347 /* MainMenu.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		04510ACF1DCFF94400CA7347 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				04510ADB1DCFF94400CA7347 /* AppDelegate.swift */,
-				04510ADD1DCFF94400CA7347 /* Assets.xcassets */,
-				04510ADF1DCFF94400CA7347 /* MainMenu.xib */,
-				04510AE21DCFF94400CA7347 /* Info.plist */,
+				044B3F181DD3E53700C6F80F /* Bridging-Header.h */,
+				040958E81DD4559100B74DF3 /* Classes */,
+				040958EA1DD455A600B74DF3 /* Views */,
+				040958E71DD4558400B74DF3 /* Samples */,
+				040958E91DD4559C00B74DF3 /* Supporting Files */,
 			);
 			path = WaveFormer;
 			sourceTree = "<group>";
@@ -91,6 +136,7 @@
 					04510AD71DCFF94400CA7347 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = TGW6PA8S8E;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -118,8 +164,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040958E61DD4291900B74DF3 /* drumLoop.aif in Resources */,
 				04510ADE1DCFF94400CA7347 /* Assets.xcassets in Resources */,
 				04510AE11DCFF94400CA7347 /* MainMenu.xib in Resources */,
+				042792321DD046F400197EEC /* drumLoop.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04510ADC1DCFF94400CA7347 /* AppDelegate.swift in Sources */,
+				04510AED1DD011FD00CA7347 /* WaveFormer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,12 +291,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TGW6PA8S8E;
 				INFOPLIST_FILE = WaveFormer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.audio-armada.WaveFormer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WaveFormer/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -256,12 +308,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TGW6PA8S8E;
 				INFOPLIST_FILE = WaveFormer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.audio-armada.WaveFormer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WaveFormer/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -285,6 +339,7 @@
 				04510AE71DCFF94400CA7347 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
